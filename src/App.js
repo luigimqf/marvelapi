@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import md5 from 'md5';
-import css from 'App.css'
+import css from './Styles/app.css'
+
 
 function App() {
 
@@ -26,9 +27,40 @@ function App() {
       console.error({error});
     }
   }
+
+  function toggleMenu(){
+    let nav = document.querySelector('.navigation')
+    let toggle = document.querySelector('.toggle')
+    nav.classList.toggle('active')
+    toggle.classList.toggle('active')
+  }
   return (
     <body>
-      <header></header>
+      <header>
+        <nav className="navigation">
+          <ul>
+            <li>
+              <a href="#">
+                <span className="title">Home</span>
+                <span className="icon"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span className="title">Heros</span>
+                <span className="icon"></span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span className="title">FAQ</span>
+                <span className="icon"></span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+    <div className="toggle" onClick={toggleMenu}></div>
     </body>
   );
 }
