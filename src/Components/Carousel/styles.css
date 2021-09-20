@@ -19,7 +19,7 @@
   color: white;
   margin-top: 20px;
   font-weight: 700;
-  font-size: 2.5rem;
+  font-size: clamp(2.5rem,3vw,3.5rem);
   user-select: none;
   margin: auto;
 }
@@ -48,13 +48,13 @@
 
 
 .card{
-  width: 150px;
-  aspect-ratio: 1/1.5;
+  width: 170px;
+  height: 250px;
   flex: none;
   position: relative;
 
-  border: 2.5px solid var(--light-bg-color);
-  margin: 40px 20px;
+  border: 2.5px solid #f39c12;
+  margin: 40px 20px ;
 
   transition: 0.5s;
 }
@@ -89,11 +89,6 @@
 
 .character_name{
   color: white;
-}
-
-.character_description{
-  color: white;
-  font-weight: 600;
 }
 .scrollButtons{
   display: flex;

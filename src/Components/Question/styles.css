@@ -2,11 +2,10 @@
   display: flex;
   flex-direction: column;
   width: 50%;
-  opacity: 80%;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--dark-bg-color);
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .trivia_questions_container h1{
@@ -17,7 +16,9 @@
 }
 
 .trivia_questions_container:hover{
-  width: 60%;
+  border-bottom: 1px solid var(--dark-bg-color);
+  border-bottom-color: #EE161F;
+  
 }
 
 .question{
@@ -43,7 +44,7 @@
 }
 
 .answer_button:hover{
-  width: 170px;
+  width: 160px;
 }
 
 @media(max-width: 847px) {

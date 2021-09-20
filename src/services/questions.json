@@ -44,5 +44,304 @@
         "label":"Time"
       }
     ]
+  },
+  {
+    "id":"7d691305-becb-44ca-880e-d164dfe24583",
+    "question":"What country are Scarlet Witch and Quicksilver from?",
+    "correct_answer":"0f77c31f-bf1d-439b-8b51-1da2d7a25a6f",
+    "answers":[
+      {
+        "id":"b8542097-1b85-4729-981f-1a19c1774136",
+        "label":"Wakanda"
+      },
+      {
+        "id":"6f195b8c-3667-497b-be9d-e296de61acba",
+        "label":"Krakoa"
+      },
+      {
+        "id":"b33259c7-9fcd-4c91-aa39-fea19d907d5d",
+        "label":"Symkaria"
+      },
+      {
+        "id":"0f77c31f-bf1d-439b-8b51-1da2d7a25a6f",
+        "label":"Sokovia"
+      }
+    ]
+  },
+  {
+    "id":"3adad588-64de-406e-8758-30f39756f4ac",
+    "question":"What's the name of the helpful AI Tony Stark invented to replace J.A.R.V.I.S.?",
+    "correct_answer":"52724389-f1f5-4c11-9365-bb8abc642d8e",
+    "answers":[
+      {
+        "id":"b633c944-59a4-4b6f-b508-fc234d72635d",
+        "label":"S.H.I.E.L.D"
+      },
+      {
+        "id":"4a2b9618-9441-490f-800d-e95f84c1ef2e",
+        "label":"U.L.T.R.O.N"
+      },
+      {
+        "id":"52724389-f1f5-4c11-9365-bb8abc642d8e",
+        "label":"F.R.I.D.A.Y"
+      },
+      {
+        "id":"261c1368-4019-4dbf-9301-5b669948ed5d",
+        "label":"E.D.I.T.H"
+      }
+    ]
+  },
+  {
+    "id":"b18168ae-e602-4fb5-b5a2-f47b0c30209f",
+    "question":"Who can lift Thor's hammer?",
+    "correct_answer":"45c8c734-f059-4672-9ccf-d3cd4d11f49f",
+    "answers":[
+      {
+        "id":"45c8c734-f059-4672-9ccf-d3cd4d11f49f",
+        "label":"Captain America"
+      },
+      {
+        "id":"510b630e-2f05-4834-9fcb-78b143669603",
+        "label":"Spiderman"
+      },
+      {
+        "id":"687c8f33-e556-468f-ae30-3cf23f1a1f5b",
+        "label":"Black Widow"
+      },
+      {
+        "id":"8b3b767e-0cfe-430c-8f5f-0ad4ac91baa5",
+        "label":"Tony Stark"
+      }
+    ]
+  },
+  {
+    "id":"dac7a416-28e3-495a-8efe-2d1c56c40287",
+    "question":"Which S.H.E.I.L.D. building is located in Washington, D.C.?",
+    "correct_answer":"650715c3-4e2b-4b22-bd04-988f05c41813",
+    "answers":[
+      {
+        "id":"07533462-cb1a-494a-bd5a-d566b6f0551d",
+        "label":"Stark Tower"
+      },
+      {
+        "id":"4ea642f8-092f-4f87-93c1-bcbe2aac8cf3",
+        "label":"The Hub"
+      },
+      {
+        "id":"650715c3-4e2b-4b22-bd04-988f05c41813",
+        "label":"The Triskelion"
+      },
+      {
+        "id":"be75f85d-07e1-48db-8390-c5be87aa5e19",
+        "label":"The Fridge"
+      }
+    ]
+  },
+  {
+    "id":"2e2d1664-3563-4df1-9784-f41583d6e10e",
+    "question":"What is Tony Stark's dad's name?",
+    "correct_answer":"bdcd476d-7fc4-44f9-be90-12feeb838dde",
+    "answers":[
+      {
+        "id":"bd3547af-d194-4cae-8e8c-7dbb7b5990c6",
+        "label":"Anthony"
+      },
+      {
+        "id":"d98e2fe9-8d54-4b5b-bb20-933a9642b40f",
+        "label":"Steve"
+      },
+      {
+        "id":"bdcd476d-7fc4-44f9-be90-12feeb838dde",
+        "label":"Howard"
+      },
+      {
+        "id":"aa62bb79-32e0-480c-b50c-c33d3ddc9a89",
+        "label":"Edwin"
+      }
+    ]
+  },
+  {
+    "id":"bf85b6bb-ea04-444c-bbd3-4f928e2da551",
+    "question":"What species did Loki discover he is?",
+    "correct_answer":"9350ffa3-819c-431f-a33f-1de2fb0367c3",
+    "answers":[
+      {
+        "id":"e766bdea-3e52-4545-bf0a-926b8c62e93c",
+        "label":"Human"
+      },
+      {
+        "id":"3a021016-319e-4ad1-83b4-cea5931ddb6f",
+        "label":"Asgardian"
+      },
+      {
+        "id":"9350ffa3-819c-431f-a33f-1de2fb0367c3",
+        "label":"Frost giant"
+      },
+      {
+        "id":"3761757f-9ab1-4947-aca1-8c6ce09ba4b9",
+        "label":"A god"
+      }
+    ]
+  },
+  {
+    "id":"28a10aa0-9a7b-4607-ad62-0267ad5450af",
+    "question":"Who is Hawkeye married to?",
+    "correct_answer":"ff292c2e-16be-4a48-a624-52ce89331974",
+    "answers":[
+      {
+        "id":"d87bcf49-14f5-4254-b597-91481e8170e1",
+        "label":"Natasha"
+      },
+      {
+        "id":"48ebf4a8-4e86-4578-b552-d6fde5c12ed4",
+        "label":"Wanda"
+      },
+      {
+        "id":"4f1e48c7-8167-4559-bd76-dd3651d0cef9",
+        "label":"Bobbi"
+      },
+      {
+        "id":"ff292c2e-16be-4a48-a624-52ce89331974",
+        "label":"Laura"
+      }
+    ]
+  },
+  {
+    "id":"174c8f84-c443-4c95-bff4-cf15ed2a100c",
+    "question":"Which of these characters is NOT a child of Thanos?",
+    "correct_answer":"dea684ce-d407-4623-8335-78786a00e43c",
+    "answers":[
+      {
+        "id":"1e3820b1-56d4-4908-b311-bc42b8e2b146",
+        "label":"Nebula"
+      },
+      {
+        "id":"dea684ce-d407-4623-8335-78786a00e43c",
+        "label":"Vision"
+      },
+      {
+        "id":"85bac267-7680-4621-997e-462f54873101",
+        "label":"Gamora"
+      },
+      {
+        "id":"96a90d04-6f3a-4c1f-9ecf-ab600b954478",
+        "label":"Ronan"
+      }
+    ]
+  },
+  {
+    "id":"79f84265-344d-4780-9e92-f0300fa233c5",
+    "question":"What kind of animal does Captain Marvel befriend?",
+    "correct_answer":"692da908-456e-4390-a1db-8159f3c353c3",
+    "answers":[
+      {
+        "id":"bc86bcd6-c834-4b15-b33a-54510e2763ba",
+        "label":"Dog"
+      },
+      {
+        "id":"692da908-456e-4390-a1db-8159f3c353c3",
+        "label":"Cat"
+      },
+      {
+        "id":"3777a460-72e8-4c1c-9f3e-bb5ae8bac5ad",
+        "label":"Goose"
+      },
+      {
+        "id":"0b877cea-e6ff-4309-adcb-53c0b9da2ca0",
+        "label":"Monster"
+      }
+    ]
+  },
+  {
+    "id":"252afe11-24b8-4f59-82bd-a09d24715155",
+    "question":"How are Erik Killmonger and T'Challa related?",
+    "correct_answer":"42906aca-cde2-4ddf-ac1c-b0fbca89ad23",
+    "answers":[
+      {
+        "id":"451f0542-e0d2-43e5-b38e-56d3daef8961",
+        "label":"Brothers"
+      },
+      {
+        "id":"8f635182-ee21-4e3f-97cd-0513d211a411",
+        "label":"Uncle and nephew"
+      },
+      {
+        "id":"42906aca-cde2-4ddf-ac1c-b0fbca89ad23",
+        "label":"Counsins"
+      },
+      {
+        "id":"2be10c59-ade3-4c4b-91f0-d59aee790602",
+        "label":"Father and son"
+      }
+    ]
+  },
+  {
+    "id":"3e6d811b-ae4f-48e5-baf8-c85fb2ce569b",
+    "question":"Who is Peter Parker's best friend?",
+    "correct_answer":"5b4763c1-1847-4b39-8cd8-09b231e670bc",
+    "answers":[
+      {
+        "id":"5b4763c1-1847-4b39-8cd8-09b231e670bc",
+        "label":"Ned"
+      },
+      {
+        "id":"2d30e062-daf7-476b-99c2-16092d7a1f02",
+        "label":"MJ"
+      },
+      {
+        "id":"be242425-1832-4b1b-b118-79d672840f45",
+        "label":"Tony"
+      },
+      {
+        "id":"5455161d-0273-4e2e-b895-ece300ba8454",
+        "label":"Flash"
+      }
+    ]
+  },
+  {
+    "id":"25a22780-49bd-4048-9b0d-974a94140baf",
+    "question":"What kind of doctor is Dr. Strange?",
+    "correct_answer":"2c29e300-9ee2-4d93-ab51-1269a7c84448",
+    "answers":[
+      {
+        "id":"2c29e300-9ee2-4d93-ab51-1269a7c84448",
+        "label":"Neurosurgeon"
+      },
+      {
+        "id":"2e93bd39-c976-4cae-9031-95dc1c205946",
+        "label":"General practitioner"
+      },
+      {
+        "id":"88d57255-8106-4cfc-bbea-d1462b30d770",
+        "label":"Cardiologist"
+      },
+      {
+        "id":"23076ec7-19bc-4f23-9213-b6b5ec49c1ce",
+        "label":"Oncologist"
+      }
+    ]
+  },
+  {
+    "id":"10e8d465-c97c-4374-ae53-74ba9fac8092",
+    "question":"What museum has a Captain American exhibit?",
+    "correct_answer":"4f3da5a2-dd4c-4a61-9d1e-cf532ee87bed",
+    "answers":[
+      {
+        "id":"4f3da5a2-dd4c-4a61-9d1e-cf532ee87bed",
+        "label":"The Smithsonian"
+      },
+      {
+        "id":"f5f552d5-581d-4e98-a9e1-dfbd63ad4d17",
+        "label":"The Met"
+      },
+      {
+        "id":"53d12c08-9ccf-4baf-9502-f1fe739e3f9b",
+        "label":"International Spy Museum"
+      },
+      {
+        "id":"293f08cb-b2c8-4495-bb36-f91a2d26fede",
+        "label":"The Guggenheim"
+      }
+    ]
   }
 ]

@@ -25,17 +25,16 @@ export function Carousel ({isLoading,characters}){
             <div className="loading"> <div className="circle"></div> </div>:
             characters
               .filter(character => filterItemWithThumb(character))
-              .map((character,index) => {
+              .map((character) => {
                 const thumb = getThumb(character)
                 return(
-                  <div onClick={() => window.open('https://www.twitch.tv/malakatv')} className="card">
+                  <div className="card">
                     <div 
                       className="front_card"
                       style={{backgroundImage:`url(${thumb})`}}
                     ></div>
                     <div className="overflow">
                       <h1 className="character_name">{`${character.name}`}</h1>
-                      <h3 className="character_description">Click for more!</h3>
                     </div>
                   </div>
                 )            

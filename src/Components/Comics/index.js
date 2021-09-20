@@ -15,7 +15,7 @@ export function Comics ({isLoading,comics}){
           .filter(comic => filterItemWithThumb(comic))
           .map((comic,index) => {
             const thumb = getThumb(comic)
-            if(index > 4 ) return null;
+            if(index > 5 ) return null;
             return(
               <div className="comics"
                     style={{backgroundImage:`url(${thumb})`}}>

@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {Home} from './pages/home'
+import { Characters } from './pages/characters';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import './Styles/app.css'
@@ -11,7 +12,7 @@ function App() {
   <BrowserRouter>  
     <Switch>
       <Route path="/" exact component={Home} />
-      <Route path="/characters/" exact />
+      <Route path="/characters" exact component={Characters}></Route>
     </Switch>
   </BrowserRouter>
 

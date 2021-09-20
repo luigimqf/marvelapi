@@ -2,30 +2,21 @@ import React, { useEffect, useState } from 'react';
 import md5 from 'md5';
 import WebFont from 'webfontloader'
 
-import questions from '../../services/questions.json'
-
-import {GoThreeBars} from 'react-icons/go'
 import Ashield from '../../assets/ashield.png'
 
 import './styles.css'
-import { Sidebar } from '../../Components/Sidebar';
-import { Toggle } from '../../Components/Toggle';
 import { Comics } from '../../Components/Comics';
 import { Carousel } from '../../Components/Carousel';
 import { getCharacters } from '../../services/character';
 import { getComics } from '../../services/comics';
-import { Question } from '../../Components/Question';
 import { Trivia } from '../../Components/Trivia';
-// import { Trivia } from '../../Components/Trivia';
+import { Link } from 'react-router-dom';
 
 export function Home() {
   const [characters, setCharacters] = useState([])
   const [comics, setComics] = useState([])
-  const [ísSideBarOpen, setIsSideBarOpen] = useState(false)
   const [isCharactersLoading, setIsCharactersLoading] = useState(false)
   const [isComicLoading, setIsComicLoading] = useState(false)
-  const [correctAnswers, setCorrectAnswers] = useState([])
-  const [userXp, setUserXp] = useState(0)
 
   
   const publicKey = '7079651304a622a7d3578e229daabdda'
@@ -42,12 +33,6 @@ export function Home() {
       }
     })
   },[])
-
-  
-  useEffect(() => {
-    userLevelUp()
-    console.log(correctAnswers)
-  },[correctAnswers])
 
   async function handleGetComics(){
     setIsComicLoading(true)
@@ -71,26 +56,10 @@ export function Home() {
     setIsCharactersLoading(false)
   }
 
-  function handleCorrectAnswers(id){
-    if(correctAnswers.includes(id)) return;
-    setCorrectAnswers([...correctAnswers,id])
-  } 
-
-  function userLevelUp(){
-    const percentage = (correctAnswers.length * 100 ) / questions.length
-    setUserXp(percentage)
-    if(percentage === 100){
-      alert('Parabens, você é um virgem')
-    }
-  }
-
-  const toggleMenu = () => setIsSideBarOpen(!ísSideBarOpen)
 
   return (
     <body>
-      <Sidebar isOpen={ísSideBarOpen}/>
-      <Toggle icon={<GoThreeBars/>}  toggle={toggleMenu}/>
-      <main>
+      <main className="main">
         <Comics isLoading={isComicLoading} comics={comics} />
 
         <div className="main_title_container">
@@ -108,25 +77,14 @@ export function Home() {
 
       <div className="cards_parent">
         <h1 className="meet_hero_title">Meet some of the Marvel's Heros</h1>
+        <div className="button_container">
+          <button className="meet_all_herous"><Link to="/characters">Meet their skills </Link></button>
+        </div>
+
         <Carousel isLoading={isCharactersLoading} characters={characters}/>
       </div>
-      {/* <Trivia user={userXp} correctAnswers={handleCorrectAnswers} questions={questions} /> */}
-      <div className="trivia_container">
-        <div className="trivia_h1_container"><h1>Fan Trivia</h1></div>
-        <div className="xp_bar_container">
-          <div className="xp_bar" style={{width:`${userXp}%`}}> 
-            <img className="xp_bar_shield"  src={Ashield} />
-          </div>
-        </div>
-            {questions?.map((question) => {
-            return <Question 
-              handleCorrectAnswers={handleCorrectAnswers}
-              question={question} 
-              key={question?.id} 
-            />
-          })}
-
-      </div>
+      <Trivia />
+      <footer> <h1>Data provided by Marvel. © 2014 Marvel</h1></footer>
     </body>
   );
 }
