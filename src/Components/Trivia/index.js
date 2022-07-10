@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Question } from "../Question";
-import './styles.css'
+import {TriviaContainer, TriviaTitle,  XpBarWrapper, XpBar, XpBarShield , QuestionsWrapper } from './style';
 
 import questions from '../../services/questions.json'
 import Ashield from '../../assets/ashield.png'
@@ -29,14 +29,14 @@ export function Trivia (){
   }
 
   return (
-    <div className="trivia_container">
-    <div className="trivia_h1_container"><h1>Fan's Trivia</h1></div>
-    <div className="xp_bar_container">
-      <div className="xp_bar" style={{width:`${userXp}%`}}> 
-        <img className="xp_bar_shield"  src={Ashield} />
-      </div>
-    </div>
-    <div className="question_container">
+    <TriviaContainer>
+    <TriviaTitle >Fan's Trivia</TriviaTitle>
+    <XpBarWrapper >
+      <XpBar  style={{width:`${userXp}%`}}> 
+        <XpBarShield  src={Ashield} />
+      </XpBar>
+    </XpBarWrapper>
+    <QuestionsWrapper>
       {questions?.map((question) => {
           return <Question 
             handleCorrectAnswers={handleCorrectAnswers}
@@ -45,7 +45,7 @@ export function Trivia (){
           />
         })}
 
-    </div>
-  </div>
+    </QuestionsWrapper>
+  </TriviaContainer>
   )
 }

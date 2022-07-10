@@ -1,4 +1,6 @@
-.trivia_questions_container{
+import styled from 'styled-components';
+
+export const TriviaQuestionContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -6,30 +8,30 @@
   justify-content: space-between;
   border-bottom: 1px solid var(--dark-bg-color);
   transition: 0.3s;
-}
 
-.trivia_questions_container h1{
-  padding-top: 40px;
-  font-weight: 800;
-  font-size: 3rem;
-  text-align: center;
-}
+  &:hover{
+    border-bottom: 1px solid var(--dark-bg-color);
+    border-bottom-color: #EE161F;
+  }
 
-.trivia_questions_container:hover{
-  border-bottom: 1px solid var(--dark-bg-color);
-  border-bottom-color: #EE161F;
-  
-}
+`
 
-.question{
+export const Questions = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 50px 0 50px 0;
   width: 100%;
-}
+` 
 
-.answer_button{
+export const QuestionsTitle = styled.h1`
+  padding-top: 40px;
+  font-weight: 800;
+  font-size: 3rem;
+  text-align: center;
+` 
+
+export const AnswerButton = styled.button`
   width: 150px;
   padding: 10px;
   margin: 5px;
@@ -41,14 +43,4 @@
   border-radius: 20px;
   transition: 0.5s;
   text-align: center;
-}
-
-.answer_button:hover{
-  width: 160px;
-}
-
-@media(max-width: 847px) {
-  .question{
-    flex-direction: column;
-  }
-}
+` 

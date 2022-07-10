@@ -1,5 +1,6 @@
 import React from "react";
-import './styles.css'
+
+import { MainComicsContainer,SkeletonComic,Comic } from './style';
 
 import {getThumb, filterItemWithThumb} from '../../utils/thumbnail'
 
@@ -8,20 +9,20 @@ import {getThumb, filterItemWithThumb} from '../../utils/thumbnail'
 export function Comics ({isLoading,comics}){
 
   return (
-    <div className="main_comics_container">
+    <MainComicsContainer >
       {isLoading
-        ? <div className="circle"></div>
+        ? Array(6).fill(1).map(() => <SkeletonComic/>)
         : comics
           .filter(comic => filterItemWithThumb(comic))
           .map((comic,index) => {
             const thumb = getThumb(comic)
             if(index > 5 ) return null;
             return(
-              <div className="comics"
-                    style={{backgroundImage:`url(${thumb})`}}>
-              </div>
+              <Comic 
+                style={{backgroundImage:`url(${thumb})`}}>
+              </Comic>
             )            
           })}
-    </div>
+    </MainComicsContainer>
   )
 }

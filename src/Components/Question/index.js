@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import './styles.css'
+import { TriviaQuestionContainer, Questions, QuestionsTitle, AnswerButton} from './style';
 
 export function Question ({question,handleCorrectAnswers}){
 
@@ -26,19 +26,18 @@ export function Question ({question,handleCorrectAnswers}){
   }
 
   return (
-    <div className="trivia_questions_container">
-      <h1>{question?.question}</h1>
-      <div className="question">
+    <TriviaQuestionContainer >
+      <QuestionsTitle>{question?.question}</QuestionsTitle>
+      <Questions>
         {question?.answers?.map(answer => {
-          return <button 
-            className="answer_button" 
+          return <AnswerButton 
             onClick={()=> handleAnswer(answer.id)} 
             style={{backgroundColor:getAnswerColor(answer?.id),color:getAnswerFontColor(answer?.id)}} 
             key={answer?.id}>{answer?.label}
-          </button>
+          </AnswerButton>
         })}
-      </div>
+      </Questions>
 
-    </div>
+    </TriviaQuestionContainer>
   )
 }

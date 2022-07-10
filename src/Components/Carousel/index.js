@@ -1,8 +1,21 @@
 import React,{useRef} from "react";
-import * as Acon from 'react-icons/bs'
-import {getThumb, filterItemWithThumb} from '../../utils/thumbnail'
 
-import './styles.css'
+import * as Acon from 'react-icons/bs'
+
+import { getThumb, filterItemWithThumb} from '../../utils/thumbnail'
+
+import { 
+  CardContainer, 
+  CardsHolder, 
+  Loading, 
+  Circle, 
+  Card,
+  FrontCard,
+  Overflow, 
+  OverflowTitle, 
+  ScrollButtons, 
+  Button 
+} from './styles'
 
 export function Carousel ({isLoading,characters}){
   
@@ -19,33 +32,32 @@ export function Carousel ({isLoading,characters}){
 
   return (
     <div>
-      <div className="card_container" ref={carouselRef}>
-        <div className="cards_holder">
+      <CardContainer ref={carouselRef}>
+        <CardsHolder>
             {isLoading? 
-            <div className="loading"> <div className="circle"></div> </div>:
+            <Loading> <Circle></Circle> </Loading>:
             characters
               .filter(character => filterItemWithThumb(character))
               .map((character) => {
                 const thumb = getThumb(character)
                 return(
-                  <div className="card">
-                    <div 
-                      className="front_card"
+                  <Card>
+                    <FrontCard 
                       style={{backgroundImage:`url(${thumb})`}}
-                    ></div>
-                    <div className="overflow">
-                      <h1 className="character_name">{`${character.name}`}</h1>
-                    </div>
-                  </div>
+                    ></FrontCard>
+                    <Overflow>
+                      <OverflowTitle>{`${character.name}`}</OverflowTitle>
+                    </Overflow>
+                  </Card>
                 )            
             })}
 
-        </div>
-      </div>
-      <div className="scrollButtons">
-        <button onClick={handleLeftClick} className="carouselScrollLeft"><Acon.BsArrowLeft/></button>
-        <button onClick={handleRightClick} className="carouselScrollRight"><Acon.BsArrowRight/></button>
-      </div>
+        </CardsHolder>
+      </CardContainer>
+      <ScrollButtons className="scrollButtons">
+        <Button onClick={handleLeftClick} className="carouselScrollLeft"><Acon.BsArrowLeft/></Button>
+        <Button onClick={handleRightClick} className="carouselScrollRight"><Acon.BsArrowRight/></Button>
+      </ScrollButtons>
     </div>
 
   )

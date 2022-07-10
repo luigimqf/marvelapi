@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import md5 from 'md5';
-import WebFont from 'webfontloader'
 
 import Ashield from '../../assets/ashield.png'
 
-import './styles.css'
+import { Body, Main , MainTitleWrapper, MainImgWrapper, MainImg,MainTitle , MainMinTitle, CardWrapper, MeetHero, SkillAnchor,ButtonWrapper,Button , Footer} from './style';
+
 import { Comics } from '../../Components/Comics';
 import { Carousel } from '../../Components/Carousel';
 import { getCharacters } from '../../services/character';
@@ -27,11 +27,6 @@ export function Home() {
   useEffect(() => {
     handleGetCharacters()
     handleGetComics()
-    WebFont.load({
-      google: {
-        families: ['Cabin', 'sans-serif']
-      }
-    })
   },[])
 
   async function handleGetComics(){
@@ -58,34 +53,33 @@ export function Home() {
 
 
   return (
-    <body>
-      <main className="main">
+    <Body>
+      <Main >
         <Comics isLoading={isComicLoading} comics={comics} />
 
-        <div className="main_title_container">
-          <div className="main_img_container">
-            <img 
-              className="main_img" 
+        <MainTitleWrapper >
+          <MainImgWrapper >
+            <MainImg 
               src={Ashield}
               onDragStart={e => e.preventDefault()}
             />
-          </div>
-          <h1 className="main_title_h1">OVER 29.000+ COMICS</h1>
-          <h3 className="main_title_h3">Read these digital comics over months</h3>
-        </div>
-      </main>
+          </MainImgWrapper>
+          <MainTitle >OVER 29.000+ COMICS</MainTitle>
+          <MainMinTitle >Read these digital comics over months</MainMinTitle>
+        </MainTitleWrapper>
+      </Main>
 
-      <div className="cards_parent">
-        <h1 className="meet_hero_title">Meet some of the Marvel's Heros</h1>
-        <div className="button_container">
-          <button className="meet_all_herous"><Link to="/characters">Meet their skills </Link></button>
-        </div>
+      <CardWrapper >
+        <MeetHero >Meet some of the Marvel's Heros</MeetHero>
+        <ButtonWrapper> 
+          <Button ><Link to="/characters">Meet their skills </Link></Button>
+        </ButtonWrapper>
 
         <Carousel isLoading={isCharactersLoading} characters={characters}/>
-      </div>
+      </CardWrapper>
       <Trivia />
-      <footer> <h1>Data provided by Marvel. © 2014 Marvel</h1></footer>
-    </body>
+      <Footer> Data provided by Marvel. © 2014 Marvel</Footer>
+    </Body>
   );
 }
 export default Home;
